@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Gear</title>
+    <link rel="icon" type="image/x-icon" href="Logo 4.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <link rel="stylesheet" href="home.css">
+   
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+</head>
+<body style="background: url(home2.jpg);background-attachment: fixed;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center"  data-aos="fade-down" data-aos-duration="2000">
+            <div class="container">
+                <a class="navbar-brand" >
+                    <img src="Logo 4.jpg" style="width:90px;height:90px;" class="rounded-pill"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="t3" style="color: white;" href="loading_page_home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" id="t2">Phone</a>
+                            <ul class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                                <!-- <h4 class="dropdown-header">Our Flasgship Series </h4> -->
+                                <li class="dropdown-item">
+                                    <div class="container">
+                                        <div class="d-flex p-2 flex-row">
+                                            <div class="p-2 flex-fill">
+                                                <a href="loading_page13.html" id="zoom_out" target="_blank" class="text-black">
+                                                    <img src="12.png"  style="height: 100px;width: 100px;"/>
+                                                </a>
+                                                <a href="loading_page13.html" target="_blank" class="text-black" id="zoom_out">Flasgship</a>
+                                            </div>
+                                            <div class="p-2 flex-fill">
+                                                <a href="loading_page_nord4.html" target="_blank" class="text-black">
+                                                    <img src="4_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                                </a>
+                                                <a href="loading_page_nord4.html" target="_blank" class="text-black" id="zoom_out">Nord</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" id="t2">Tablet</a>
+                            <ul class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                                <li class="dropdown-item">
+                                    <div class="container">
+                                        <div class="d-flex p-2 flex-row">
+                                            <div class="p-2 flex-fill">
+                                                <a href="loading_page_ipad2.html" target="_blank" class="text-black">
+                                                    <img src="pad2_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                                </a>
+                                                <a href="loading_page_ipad2.html" target="_blank" class="text-black" id="zoom_out">OnePlus Pad 2</a>
+                                            </div>
+                                            <div class="p-2 flex-fill">
+                                                <a href="loading_page_ipad.html" target="_blank" class="text-black">
+                                                    <img src="tab.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                                </a>
+                                                <a href="loading_page_ipad.html" target="_blank" class="text-black" id="zoom_out">OnePlus Pad</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" id="t2">Wearable</a>
+                            <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                                <li class="dropdown-item">
+                                    <div class="container">
+                                        <div class="d-flex p-2 flex-row">
+                                            <div class="p-2 flex-fill">
+                                                <a href="loading_page_watch2.html" target="_blank" class="text-black">
+                                                    <img src="2_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                                </a>
+                                                <a href="loading_page_watch2.html" target="_blank" class="text-black" id="zoom_out">OnePlus Watch 2</a>
+                                            </div>
+                                            <div class="p-2 flex-fill">
+                                                <a href="loading_page_watch2r.html" target="_blank" class="text-black">
+                                                    <img src="2r_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                                </a>
+                                                <a href="loading_page_watch2r.html" target="_blank" class="text-black" id="zoom_out">OnePlus Watch 2R</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" id="t2">OneTopia</a>
+                            <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                                <h4 class="dropdown-header"> Evolve Your Digital life</h4>
+                                <li class="dropdown-item">
+                                    <a href="#photo" class="text-black" id="zoom_out">2024 Oneplus Photo Awards</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="#os" class="text-black" id="zoom_out">Oxygen Os</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" id="t2">Community</a>
+                            <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                                <h4 class="dropdown-header"> Welcome To Oneplus Community</h4>
+                                <li class="dropdown-item">
+                                    <a href="#comunity" class="text-black" id="zoom_out">Power of Community</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" id="t2">Support</a>
+                            <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                                <h4 class="dropdown-header" >Welcome To OnePlus Support</h4>
+                                <li class="dropdown-item">
+                                    <a href="#repair" id="zoom_out" class="text-black">Repair Service</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="#repair" id="zoom_out" class="text-black">Service Record</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="cart.html" style="color: white;" id="t2">Go To Cart</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="search-container ms-auto d-flex align-items-center">
+                    <button class="search-icon btn" onclick="toggleSearchBar()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input type="text" id="searchInput" class="form-control search-bar" placeholder="Search Products...">
+                </div> -->
+            </div>
+        </nav>
+
+        <!-- 13 series -->
+ <div class="container-fluid" data-name="OnePlus 13">
+    <div class="row p-2">
+        <div class="col-lg-6 col-md-12 col-12 d-flex justify-content-center mb-4"  >
+            <!--  move right -->
+            <a id="img1" href="loading_page13.html" style="text-decoration: none;color: white;">
+                <img src="13 series.jpg" alt="13 series" style="height: 500px;width: 100%;object-fit: cover;border: 5px double black;">
+            </a>
+        </div>
+        <!--  box comes down -->
+        <div id="img4" style="color: white;border: 5px double white;" class="col-lg-6 col-md-12 col-12 d-flex flex-column align-items-center mb-4 " >
+            <h1 class="appply_margin_top">Starting just at 69,999</h1>
+            <h3>OnePlus 13 is here</h3>
+            <ul>
+                <li>Snapdragon 8 Elite Processor</li>
+                <li>6000mAh Battery with 120W Fast Charging</li>
+                <li>Triple Camera Setup (50MP + 50MP + 64MP)</li>
+                <li>OxygenOS based on Android 15</li>
+                <li>5G+ Connectivity with Jio</li>
+                <li>In-display Ultrasonic Fingerprint Sensor</li>
+            </ul>
+        
+            <button class="btn bg-black mt-2" style="border-radius: 25px;color: aliceblue;">
+                <a href="loading_page13.html" style="text-decoration: none;color: white;">Check It Out</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- nord -->
+<div class="container-fluid" data-name="OnePlus Nord 4">
+   <div class="row p-2">
+    <!-- text comes down -->
+       <div id="img4" class="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center mb-4" style="color: white;border: 5px double white;" data-aos="fade-down" data-aos-duration="2000">
+           <h1 class="appply_margin_top">Starting just at 29,999</h1>
+           <h3>Nord 4 is here </h3>
+           <ol>
+              <li>Snapdragon 7+ Gen 3 Processor</li>
+               <li>5500mAh Battery with 100W Fast Charging</li>
+               <li>Sony Dual Camera Setup</li>
+               <li>4 Year of OS update</li>
+               <li>Uni-Metal Design</li>
+               <li>With Oneplus alert silder</li>
+           </ol>
+           <h3>Sale has started</h3>
+           <button class="btn bg-black mt-2" style="border-radius: 25px;color: aliceblue;">
+               <a href="loading_page_nord4.html" style="text-decoration: none;color: white;">
+                   Check It Out
+               </a>
+           </button>
+       </div>
+       <!-- moves left  -->
+       <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-duration="2000">
+           <a href="loading_page_nord4.html" style="text-decoration: none;color: white;">
+               <img id="img3" src="nord4.jpg" alt="Oneplus Nord CE 4 series"
+               style="z-index: -1;height: 500px;width: 100%;object-fit: cover;background-color:lightgray;border:5px double black">
+           </a>
+       </div>
+   </div>
+</div> 
+
+<!-- nord ce -->
+<div class="container-fluid" >
+    <div class="row p-2">
+      <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-duration="2000">
+            <a href="loading_page_nord_ce4.html" style="text-decoration: none;color: white;">
+                <img id="img1" src="nordce4.jpg" alt="Oneplus Nord CE 4 series"
+                style="z-index: -1;height: 500px;width: 100%;object-fit: cover;background-color:lightgray;border: 5px double black;">
+            </a>
+        </div>
+        <div id="img4" class="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center mb-4" style="border: 5px double white;color: white;"  data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="appply_margin_top" >Starting just at 24,999</h1>
+            <h3>Nord CE 4 is here</h3>
+            <ul>
+                <li>Snapdragon 7 Gen 3 Processor</li>
+                <li>5500mAh Battery with 80W Fast Charging</li>
+                <li>Sony Dual Camera Setup</li>
+                <li>2 Year of OS update</li>
+            </ul>
+            <h3>Sale has started</h3>
+            <button class="btn bg-black mt-2" style="border-radius: 25px;color: aliceblue;">
+                <a href="loading_page_nord_ce4.html" style="text-decoration: none;color: white;">
+                    Check It Out
+                </a>
+            </button>
+        </div>
+    </div>
+   </div>
+
+   <!-- lite and r -->
+<div class="container-fluid" >
+    <div class="row p-2 ">
+        <div id="img4" class=" col-lg-3 col-md-6 col-12 d-flex flex-column align-items-center mb-4" style="border: 5px double white;color: white;" data-aos="flip-right" data-aos-duration="1000">
+            <h1>Sale has started</h1>
+            <h4>Nord CE 4 Lite is here</h4>
+            <ul>
+                <li>Affordable pricing with premium features</li>
+                <li>Snapdragon 695 processor for daily tasks</li>
+                <li>Long-lasting 5000mAh battery with fast charging</li>
+                <li>Sleek and lightweight design</li>
+            </ul>
+            <h3>Starting only at 16,999 </h3>
+            <a href="loading_page_nor_ce_lite4.html"
+            style="text-decoration: none;color: white;">
+            <button class="btn bg-black mt-2 "
+            style="z-index: 1;border-radius: 25px;color: aliceblue; ">
+            Check It Out
+               
+            </button>
+        </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="flip-right" data-aos-duration="1000">
+           
+            <a href="loading_page_nor_ce_lite4.html" style="text-decoration: none;color: white;">
+                <img id="img4" src="ce 4 lite.jpg"
+                   style="z-index: -1;height: 500px;width:100%;object-fit: cover;border: 5px double black;background-color:lightgray;" />   
+            </a>
+        </div>
+        <div id="img4" class="col-lg-3 col-md-6 col-12 d-flex flex-column align-items-center mb-4" style="border: 5px double white;color: white;" data-aos="flip-right" data-aos-duration="2000">
+            <h1>Sales Has Started</h1>
+            <h3>OnePlus 13R is here</h3>
+            <ol>
+                <li>Powerful Snapdragon 8 Gen 3 processor </li>
+                <li>Fast charging technology for quick power-ups</li>
+                <li>High-quality Triple camera setup for stunning photography</li>
+                <li>Premium design and build quality</li>
+            </ol>
+            <h3>Starting only at 42,999 </h3>
+            <button class="btn bg-black mt-2 "
+            style="z-index: 1;border-radius: 25px;color: aliceblue; ">
+            <a href="loading_page13r.html"
+                style="text-decoration: none;color: white;">
+                Check It Out
+            </a>
+        </button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4"  data-aos="flip-right" data-aos-duration="2000">
+            <a href="loading_page13r.html">
+                    <img id="img4" src="flagship\\rad13rwhite.png"
+                        style="z-index: -1;height: 500px;width: 100%;object-fit: cover;background-color: lightgray;border: 5px double black;" />
+                </a>
+        </div>
+    </div>
+</div>
+<!-- tablet and watch -->
+<div class="container-fluid">
+    <div class="row p-3" >
+        <!-- First Section: Text and Button -->
+         <!--  moves up -->
+        <div id="img2" data-name="OnePlus Pad 2" class="col-lg-3 col-md-6 col-12 d-flex flex-column align-items-center mb-4" style="border: 5px double white;color: white;"  data-aos="flip-left" data-aos-duration="2500">
+            <h1>Sales Has Started</h1>
+            <h3>OnePlus Pad 2 is here</h3>
+            <ol>
+                <li>Display with 144Hz refresh rate</li>
+                <li>Powerful Snapdragon 8 Gen 3 for seamless performance</li>
+                <li>Massive 9510mAh battery with fast charging</li>
+                <li>Advanced camera setup with 13MP rear and 8MP front</li>
+            </ol>
+            <h3>Starting at 39,999</h3>
+            <button class="btn bg-black mt-2" style="border-radius: 25px;color: aliceblue;" >
+                <a href="loading_page_ipad2.html" style="text-decoration: none;color: white;">
+                Check It Out
+                </a>
+            </button>
+        </div>
+
+        <!-- First Image -->
+        <div data-name="OnePlus Pad 2" class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="flip-left" data-aos-duration="2500">
+            <a href="loading_page_ipad2.html" style="text-decoration: none;color: white;">
+                <img id="img2" src="pad_main.jpg"
+                    style="height: 500px; width: 100%; object-fit: cover;border: 5px double black;color: white;background-color:lightgray;"/>
+            </a>
+        </div>
+
+        <!-- Second Section: Text and Button -->
+        <div id="img2" data-name="OnePlus watch 2" class="col-lg-3 col-md-6 col-12 d-flex flex-column align-items-center mb-4" style="color: white;;border: 5px double white;" data-aos="flip-left" data-aos-duration="2000">
+            <h1>Sale has Started</h1>
+            <h4>OnePlus watch 2 is here</h4>
+            <ul>
+                <li>High-resolution AMOLED display </li>
+                <li>Long battery life with fast charging capabilities</li>
+                <li>Comprehensive health and fitness tracking features</li>
+                <li>Robust build with water resistance</li>
+            </ul>
+            <h3>Starting at 17,999</h3>
+            <button class="btn bg-black mt-2" style="border-radius: 25px;color: aliceblue;">
+                <a href="loading_page_watch2.html" style="text-decoration: none;color: white;">
+                    Check It Out
+                </a>
+            </button>
+        </div>
+
+        <!-- Second Image -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="flip-left" data-aos-duration="2000">
+            <a href="loading_page_watch2.html" data-name="OnePlus watch 2" style="text-decoration: none;color: white;">
+                <img id="img2" src="watch\\car_watch2r.png"
+                    style="height: 500px; width: 100%; object-fit: cover; background-color:lightgray;border: 5px double black;"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+  <!-- Promise and Programe -->
+  <div class="container-fluid">
+    <div class="row p-3">
+        <div id="img2" style="border: 5px double white;color: white;" class="col-lg-3 col-md-6 col-12 d-flex flex-column align-items-start mb-4" data-aos="fade-up" data-aos-duration="3000">
+            <h4>A OnePLus Promise</h4>
+            <br>
+            <h6>A confidence that last a lifetime with Oneplus</h6>
+            <br>
+            <h6>Green Line Worry-Free Solution's.</h6>
+            <button class="btn bg-black mt-2 " style="z-index: 1;border-radius: 25px;color: aliceblue;">Learn
+                More</button>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="flip-down" data-aos-duration="3000">
+            <img id="img3" src="warrinty.jpg" class="image-section"
+                    style="height: 300px;width: 100%;position: relative;display: absolute;background-color:lightgray;border:5px double black" />
+        </div>
+       
+        <div id="img2" style="border: 5px double white;color: white;" class="col-lg-3 col-md-6 col-12 d-flex flex-column align-items-start mb-4" data-aos="flip-down" data-aos-duration="3000">
+            <h4>Corporate Employee Program</h4>
+            <br>
+            <h6>Unlock exclusive discount on OnePlus product are as a verified corporate employee</h6>
+            <br>
+            <h6>Register now to check your eligibilty by entering it</h6>
+            <button class="btn bg-black mt-2 " class="image-section" style="z-index: 1;border-radius: 25px;color: aliceblue;">Learn
+                More</button>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-duration="3000">
+            <img id="img3" src="corporate.jpg"
+            style="height: 300px;width: 100%;position: relative;display: absolute; overflow: hidden;background-color:lightgray;border:5px double black" />
+     </div>
+       
+    </div>
+</div>
+<!-- os -->
+<div id="os" class="container-fluid my-4" >
+    <div class="row p-3">
+        <!-- Image Section -->
+        <div class="col-lg-6 col-md-12 col-12 d-flex justify-content-center mb-4" data-aos="fade-down" data-aos-duration="2000">
+            <img id="img1" src="os15.jpg" class="image-section"
+                style="height: 350px; width: 100%; object-fit: cover;background-color:lightgray;border:5px double black"/>
+        </div>
+
+        <!-- Text Section -->
+        <div id="img3" style="border: 5px double white;color: white;" class="col-lg-6 col-md-12 col-12 d-flex flex-column justify-content-center text-section mb-4" data-aos="fade-up" data-aos-duration="2000">
+            <h3>Speed Meets AI</h3>
+            <h1>OxygenOS 15</h1>
+            <h6>Glide with OxygenOS 15, Soar to a new apex of speed & dive into extreme smoothness. With the latest AI features for a smartphone, Speed meets AI.</h6>
+            <button class="btn bg-black mt-2" style="border-radius: 25px; color: aliceblue;">
+            Learn More
+            </button>
+        </div>
+    </div>
+</div>
+
+ <!-- eco system and communty -->
+ <div class="container-fluid my-4 bg-black" style="color: aliceblue;" data-aos="zoom-in" data-aos-duration="3000">
+    <div class="container" style="background-color: black;">
+        <div class="row p-3" data-aos="flip-left" data-aos-duration="3000">
+            <div class="col-lg-6 col-md-12 col-12 d-flex justify-content-center mb-4">
+                <img id="img7" src="ecosystem.jpg" class="image-section"
+                    style="height: 350px;width: 100%; object-fit: cover;" />
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 d-flex flex-column justify-content-center text-section mb-4"  data-aos="flip-right" data-aos-duration="3000">
+                <h3>One For All</h3>
+                <br>
+                <h1>OnePlus Ensemble</h1>
+                <br>
+                <h6>Seamlessly connect with all OnePlus product to one another for a smart & smooth experience</h6>
+                <br>
+                <button class="btn mt-2 "
+                    style="z-index: 1;border-radius: 25px;color:black; background-color: aliceblue;">Learn More</button>
+            </div>
+        </div>
+        <h4  data-aos="flip-right" data-aos-duration="3000">Red Cable Club</h4>
+        <div id="comunity" class="row p-3">
+            <div class=" col-lg-6 col-md-12 col-12 d-flex flex-column justify-content-center text-section mb-4"  data-aos="flip-right" data-aos-duration="3000" >
+                <h3>One Community,limitless passion </h3>
+                <br>
+                <br>
+                <h6>United by one common belif-'Great happens when we're all wired together'</h6>
+                <br>
+                <button class="btn mt-2 "
+                    style="z-index: 1;border-radius: 25px;color:black; background-color: aliceblue;">Join
+                    Now</button>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 d-flex justify-content-center mb-4"  data-aos="flip-left" data-aos-duration="3000">
+                <img id="img6" src="runing.jpg" class="image-section"
+                    style="height: 350px;width: 100%; object-fit: cover;" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- photo award -->
+<div id="photo" class="container-fluid">
+    <div class="row p-3">
+        <div class="col-lg-6 col-md-12 col-12 d-flex justify-content-center mb-4"  data-aos="fade-down" data-aos-duration="3000">
+            <img id="img1" src="camera.jpg"
+                style="height: 350px;width: 100%;object-fit: cover;background-color:lightgray;border:5px double black" />
+        </div>
+        <div id="img3" style="color:white;border:  5px double white;" class="col-lg-6 col-md-12 col-12 d-flex flex-column justify-content-end text-section mb-4" data-aos="fade-up" data-aos-duration="3000">
+            <h3>Make The Moment</h3>
+            <br>
+            <h1>2024 OnePlus Photography Awards</h1>
+            <br>
+            <br>
+            <h6>The 2024 OnePlus Photography Awards welcomes
+                EVERY Photography enthusiast around the world.
+                Showcase your unique creativity and remarkable talent,and
+                share your visual story with breaktaking images.
+                Make your Moment on OnePlus</h6>
+            <br>
+            <button class="btn mt-2 "
+                style="z-index: 1;border-radius: 25px;color: aliceblue; background-color: black;">Learn
+                More</button>
+        </div>
+    </div>
+</div>
+
+  <!-- servecies available -->
+  <div id="repair"  class="container-fluid">
+    <div class="row p-3">
+        <div id="img1" style="background-color: white;border: 5px double black;" class="col-lg-3 col-md-6 col-12 d-flex flex-column mb-4" data-aos="fade-up" data-aos-duration="3000">
+            <h5>One-on-One with OnePlus</h5>
+            <br>
+            <h2>Your personal Helpdesk.</h2>
+            <br>
+            <h6>From Finding the perfect phone to quickly resolving queries,we're always ready to help</h6>
+            <button class="btn bg-black mt-2 " style="z-index: 1;border-radius: 25px;color: aliceblue;">Let's
+                chat</button>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="fade-down" data-aos-duration="3000">
+            <img id="img3" src="help.jpg"
+                style="height: 300px;width: 100%;position: relative;display: absolute; overflow: hidden;background-color:lightgray;border:5px double black" />
+        </div>
+        <div id="img1" style="background-color: white;border: 5px double black;" class="col-lg-3 col-md-6 col-12 d-flex flex-column mb-4" data-aos="fade-up" data-aos-duration="3000">
+            <h5 >OnePlus Service Center</h5>
+            <br>
+            <h2>Our technical team is here to help</h2>
+            <br>
+            <h6>We have 250 authorized service centers across India.All the fully-trained OnePlus staf</h6>
+            <button class="btn bg-black mt-2 " style="z-index: 1;border-radius: 25px;color: aliceblue;">Learn
+                More</button>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center mb-4" data-aos="fade-down" data-aos-duration="3000">
+            <img id="img3" src="connect.jpg"
+                style="height: 300px;width: 100%;position: relative;display: absolute; overflow: hidden;background-color:lightgray;border:5px double black" />
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="container-fluid" style="background-color: black; border: 7px double white;" data-aos="zoom-in" data-aos-duration="3000">
+    <div class="row">
+        <div class="col p-3" style="color: aliceblue;">
+            <h4>
+                Phones
+            </h4>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Store
+                </h1>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Support
+            </h4>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Explore
+            </h4>
+        </div>
+       
+    </div>
+    <div class="row" style="border: 2px solid white;">
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page13.html" style="text-decoration: none;" >
+                    OnePlus 13 series
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_ipad2.html" style="text-decoration: none;">
+                    Tablet
+                </a>
+
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="home.html#repair" style="text-decoration: none;">
+                    Service center
+                </a>
+
+
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="home.html#comunity" style="text-decoration: none;">
+                Our Communtiy
+                </a>
+
+            </h6>
+        </div>
+       
+    </div>
+    <div class="row" style="border: 2px solid white;">
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_nord4.html" style="text-decoration: none;">
+                    OnePlus Nord 4
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_watch2.html" style="text-decoration: none;">
+                    Wearable
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="home.html#repair" style="text-decoration: none;">
+                    Repair Service
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="home.html#os" style="text-decoration: none;">
+                    Our Os Operating system
+                </a>
+            </h6>
+        </div>
+           
+    </div>
+    
+</div>   
+     <!-- AOS JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+ <script>
+     AOS.init();
+ </script>
+</body>
+</html>

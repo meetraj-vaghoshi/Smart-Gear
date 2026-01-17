@@ -1,0 +1,1221 @@
+<html>
+    <head>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+      />
+      <title>Smart Gear Nord</title>
+      <link rel="icon" type="image/x-icon" href="logo 4.jpg">
+      <link rel="stylesheet" href="home.css">
+   
+          <!-- AOS CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,maximum-scale=0.5,minimum-scale=01">
+      <style>    
+.navbar {
+  font-size: 21px;
+    z-index: 1000; /* Ensures navbar stays on top of other content */
+}
+
+.navbar .navbar-brand {
+    color: black;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: black;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+    display: inline-block; /* Make sure the link is treated as inline-block for correct positioning */
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%; /* Full width when hovered */
+}
+
+.nav .nav-link {
+    /* color: white; */
+    position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+    display: inline-block; /* Make sure the link is treated as inline-block for correct positioning */
+}
+
+.nav .nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color:blue;
+    display: block;
+    position: absolute;
+    bottom: -2px; /* Position it just below the link */
+    left: 0; /* Align it to the left of the link */
+    transition: width 0.8s; /* Smooth transition for width */
+}
+
+/* .nav .nav-link:hover {
+    color:white;
+} */
+
+.nav .nav-link:hover::after {
+    width: 100%; /* Full width when hovered */
+}
+
+        .dropdown-menu{
+         display: none;
+         position: absolute;
+         color: black;
+         min-width: 150px;
+         opacity: 0;
+         animation:  fadeInSlideDown 1s Forwards;
+         z-index: 1;
+        }
+        .dropdown-menu a{
+         color: aliceblue;
+         text-decoration: underline;
+         display: block;
+        }
+        .dropdown-menu a:hover{
+         background-color: aliceblue;
+         z-index: 10;
+        }
+        .nav-item:hover .dropdown-menu{
+         z-index: 10;
+        display: block;
+        }
+        .dropdown-item {
+         margin-bottom: 15px;
+         text-align: center;
+        }
+        .dropdown-item img{
+         width: 100%;
+         max-width: 150px;
+         height: auto;
+         border-radius: 5px;
+        }
+        .dropdown-item a{
+         color: white;
+         text-decoration: none;
+         display: block;
+         margin-top: 10px;
+         font-weight: bold;
+        }
+        .text-black{
+         color: black;
+        }
+        @keyframes fadeInSlideDown {
+         0%{
+             opacity: 0;
+             transition: translateY(-10px);
+         }
+         100%{
+             opacity: 1;
+             transform: translateY(0);
+         }
+        }
+        h6{
+         color: grey;
+        }
+        #img2:hover{
+            border: 5px double   white;
+            box-shadow: 0 0 20px 0 white;
+        } 
+        #img1:hover{
+            border: 5px double   black;
+            box-shadow: 0 0 20px 0 black;
+        }
+       
+        #img{
+            max-width: auto;
+            height: auto;
+        }
+        a{
+            color: gray;
+            text-decoration: none;
+        }
+        .tab_img{
+            z-index: -1;
+            height: 500px;
+            width:100%;
+            object-fit: cover;
+            border-radius: 7%;
+        }
+         /* For smaller screens (phones) */
+  @media (max-width: 767px) {
+    .carousel-item img {
+      max-height: 300px; /* Adjust for mobile screens */
+      object-fit: cover;
+    }
+  }
+
+  /* For tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .carousel-item img {
+      max-height: 400px; /* Adjust for tablet screens */
+      object-fit: cover;
+    }
+  }
+  /* For smaller screens (phones) */
+  @media (max-width: 767px) {
+    .form-check img {
+      max-height: 140px; /* Adjust image height for mobile screens */
+      width: 70% !important; /* Make sure the image takes more width */
+      object-fit: contain;
+    }
+  }
+
+  /* For tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .form-check img {
+      max-height: 170px; /* Adjust image height for tablet screens */
+      width: 75% !important; /* Adjust width */
+      object-fit: contain;
+    }
+  }
+
+  /* For larger screens (desktops, laptops) */
+  @media (min-width: 1025px) {
+    .form-check img {
+      max-height: 170px; 
+      /* Adjust image height for desktop */
+      width: 75% !important;
+       /* Adjust width for larger screens */
+      object-fit: contain;
+    }
+  }
+  /* tab text */
+  /* For smaller screens (phones) */
+  @media (max-width: 767px) {
+    #demo22 h1 {
+      font-size: 1.5rem; /* Reduce font size for mobile */
+    }
+    #demo22 h6 {
+      font-size: 1rem; /* Reduce font size for mobile */
+    }
+    #car11{
+      width: auto!important;
+      height: 200px!important;
+    }
+   
+    .d-flex {
+      flex-direction: column; /* Stack the flex items vertically for small screens */
+    }
+    .p-2, .p-3 {
+      padding: 5px; /* Reduce padding inside the flex items */
+    }
+  }
+
+  /* For tablets (768px to 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #demo22 h1 {
+      font-size: 1.75rem; /* Adjust font size for tablets */
+    }
+    #demo22 h6 {
+      font-size: 1.2rem; /* Adjust font size for tablets */
+    }
+  
+    .d-flex {
+      flex-direction: row; /* Arrange the flex items in a row for tablets */
+    }
+  }
+
+  /* For larger screens (desktops, laptops) */
+  @media (min-width: 1025px) {
+    #demo22 h1 {
+      font-size: 2rem; /* Larger font size for desktops */
+    }
+    #demo22 h6 {
+      font-size: 1.25rem; /* Larger font size for desktops */
+    }
+    
+  }
+  #img7:hover{
+            /* one for all */
+            border: 5px double   white;
+            box-shadow: 0 0 20px 0 white;
+            /* opacity: 0; */
+            animation: fadeInSlideDown3 2s Forwards;
+            z-index: 1;
+       
+        }
+        @keyframes fadeInSlideDown3 {
+            /* 13 ce */
+            0% {
+                opacity: 0;
+                transition: translateY(-1px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(5px);
+                
+            }
+            
+        }
+     </style>
+     <script>
+      function addToCart(product) {
+       let name;
+       if (product === 'nord4') name = "Oneplus Nord 4";
+       else if (product === 'nordce4') name = "OnePlus Nord CE 4";
+       else name = "Oneplus Nord Ce 4 Lite";
+   
+       // Get selected RAM & Storage option
+       let ramStorage = document.querySelector(`input[name="ramStorage-${product}"]:checked`);
+       let model = ramStorage ? ramStorage.value.split('|')[0] : "12GB RAM + 256GB Storage";
+       let price =  parseInt(ramStorage.value.split('|')[1].replace(/[^0-9]/g, ''));
+   
+       // Get selected color & corresponding image
+       let colorOption = document.querySelector(`input[name="color-${product}"]:checked`);
+       let color = colorOption ? colorOption.dataset.color : "Default Color";
+       let image = colorOption ? colorOption.dataset.image : "default.png";
+   
+       // Save to cart
+       let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+       cart.push({ name, price, model, color, image, quantity: 1 });
+       sessionStorage.setItem("cart", JSON.stringify(cart));
+   
+       alert(name + " added to cart!");
+   }
+   
+   </script>
+   
+    </head>
+    <body style=" background:  url(home2.jpg);">
+    <div class="container">
+     <nav class="navbar navbar-expand-lg navbar-light justify-content-center"  data-aos="fade-down" data-aos-duration="2000">
+          <div class="container">
+              <a class="navbar-brand" >
+                  <img src="Logo 4.jpg" style="width:90px;height:90px;" class="rounded-pill"/>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav justify-content-center">
+                      <li class="nav-item">
+                          <a class="nav-link" id="t2" style="color: white;" href="loading_page_home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" style="color: white;" id="t3">Phone</a>
+                          <ul class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <!-- <h4 class="dropdown-header">Our Flasgship Series </h4> -->
+                              <li class="dropdown-item">
+                                  <div class="container">
+                                      <div class="d-flex p-2 flex-row">
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page13.html" id="zoom_out" target="_blank" class="text-black">
+                                                  <img src="12.png"  style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page13.html" target="_blank" class="text-black" id="zoom_out">Flasgship</a>
+                                          </div>
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_nord4.html" target="_blank" class="text-black">
+                                                  <img src="4_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_nord4.html" target="_blank" class="text-black" id="zoom_out">Nord</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">Tablet</a>
+                          <ul class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <li class="dropdown-item">
+                                  <div class="container">
+                                      <div class="d-flex p-2 flex-row">
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_ipad2.html" target="_blank" class="text-black">
+                                                  <img src="pad2_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_ipad2.html" target="_blank" class="text-black" id="zoom_out">OnePlus Pad 2</a>
+                                          </div>
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_ipad.html" target="_blank" class="text-black">
+                                                  <img src="tab.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_ipad.html" target="_blank" class="text-black" id="zoom_out">OnePlus Pad</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">Wearable</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <li class="dropdown-item">
+                                  <div class="container">
+                                      <div class="d-flex p-2 flex-row">
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_watch2.html" target="_blank" class="text-black">
+                                                  <img src="2_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_watch2.html" target="_blank" class="text-black" id="zoom_out">OnePlus Watch 2</a>
+                                          </div>
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_watch2r.html" target="_blank" class="text-black">
+                                                  <img src="2r_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_watch2r.html" target="_blank" class="text-black" id="zoom_out">OnePlus Watch 2R</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">OneTopia</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <h4 class="dropdown-header"> Evolve Your Digital life</h4>
+                              <li class="dropdown-item">
+                                  <a href="index.html#photo"  class="text-black" id="zoom_out">2024 Oneplus Photo Awards</a>
+                              </li>
+                              <li class="dropdown-item">
+                                  <a href="index.html#os"  class="text-black" id="zoom_out">Oxygen Os</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">Community</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <h4 class="dropdown-header"> Welcome To Oneplus Community</h4>
+                              <li class="dropdown-item">
+                                  <a href="index.html#comunity"  class="text-black" id="zoom_out">Power of Community</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">Support</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <h4 class="dropdown-header" >Welcome To OnePlus Support</h4>
+                              <li class="dropdown-item">
+                                  <a href="index.html#repair"  id="zoom_out" class="text-black">Repair Service</a>
+                              </li>
+                              <li class="dropdown-item">
+                                  <a href="index.html#photo"  id="zoom_out" class="text-black">Service Record</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item" >
+                          <a class="nav-link" href="loading_page_cart.html" style="color: white;" id="t2">Go To Cart</a>
+                      </li>
+                  </ul>
+              </div>
+                
+          </div>
+      </nav>
+
+
+    <div class=" container-fluid-md mt-5" style="background-color: black;color: white;" data-aos="fade-down" data-aos-duration="2000">
+      <ul class="nav nav-tabs justify-content-center" style="background-color: black;color: white;"> 
+        <li class="nav-item" > 
+        <a class="nav-link active" data-bs-toggle="tab" href="#nord4">Nord 4</a> 
+        </li> 
+        <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#nord4ce" >Nord CE 4</a> 
+         </li> 
+        <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#nord4celite">Nord CE 4 Lite</a> 
+      </li> 
+        </ul>
+    <div class="tab-content " style="background-color: black;color: white;" data-aos="fade-down" data-aos-duration="2000">
+     <div id="nord4" class="container tab-pane active" >
+      <div class="container-fluid" >
+        <h5 style="color: red;">9% OFF</h5>
+        <!-- <br> -->
+        <h2>OnePlus Nord 4</h2>
+        <!-- <br> -->
+        <h6 style="color: gray;">8GB RAM + 256 GB Storage | Mercurial Silver</h6>
+        <!-- <br> -->
+        <h4 style="color: gray;">₨ 29,999 Before Exchange</h4>
+    <div style="color: gray;">
+        M.R.P
+        <a style="text-decoration: line-through;">₨ 32,999</a>
+        (inclusive of all taxes)
+    </div>
+    <div class="container-fluid" style="height: 200px;width:500px;" id="car11">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+        <div class="carousel-indicators">
+          <button data-bs-target="#demo" data-bs-slide-to="0" class="active"> </button>
+              <button data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button data-bs-target="#demo" data-bs-slide-to="2"></button>
+              <button data-bs-target="#demo" data-bs-slide-to="3"></button>
+              
+          
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1000s">
+              <img  src="sec_nord.png" class="d-block w-100"/>
+            
+          </div>
+          <div class="carousel-item" data-bs-interval="1000s">
+            <img  src="sec_nord_1.png" class="d-block w-100"/>
+           
+          </div>
+          <div class="carousel-item" data-bs-interval="1000s">
+            <img  src="sec_nord_2.png" class="d-block w-100"/>
+             
+          </div>  
+          <div class="carousel-item" data-bs-interval="1000s">
+            <img  src="sec_nord_3.png" class="d-block w-100"/>
+              
+          </div>  
+        </div>
+      <button class="carousel-control-prev" data-bs-target="#demo" data-bs-slide="prev">
+          <span  class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" data-bs-target="#demo" data-bs-slide="next">
+          <span  class="carousel-control-next-icon"></span>
+      </button>
+      
+       </div>
+    </div>
+    
+</div>
+<div clas="container" style="margin-top: 35%;" data-aos="fade-down" data-aos-duration="2000">
+ <h6>The minimum fixed price is: ₹29,999</h6>
+<h6>Enjoy extra discount using OnePlus Corporate Employee Program. Limited Eligibilty.</h6>
+<h6>Benefits worth ₹2250 for JioPlus Postpaid Users.</h6>
+<h6>No more than one stackable coupon can be used per order.</h6>   
+<h3 style="text-decoration: underline;">ROM</h3> 
+</div>
+<div class="d-flex justify-content-around" data-aos="fade-down" data-aos-duration="2000">
+ 
+   <div class="form">
+      <div id="img7" class="form-check" >
+        <input type="radio" class="form-check-input" id="radio1"  name="ramStorage-nord4" value="8GB RAM + 256 GB Storage | ₹29,999" checked>8GB RAM + 256 GB Storage
+        <label class="form-check-label"> ~29,999</label> 
+       
+      </div>
+    </div>
+  <div class="form">
+      <div id="img7" class="form-check"  >
+        <input type="radio" class="form-check-input" id="radio1"  name="ramStorage-nord4" value="12GB RAM + 512 GB Storage | ₹32,999">12GB RAM + 256 GB Storage
+        <label class="form-check-label">  ~32,999</label> 
+       
+      </div>
+    </div>
+</div>
+ <h3 style="text-decoration: underline;" data-aos="fade-down" data-aos-duration="2000">Available Colors</h3> 
+ <div class="d-flex justify-content-around" data-aos="fade-down" data-aos-duration="2000">
+    <div class="form">
+        <div id="img7"  class="form-check"  >
+          <input type="radio" class="form-check-input" id="radio1" value="option1"  name="color-nord4" data-color="Mercurial Silver" data-image="4_nav.png" checked>
+          <img  src="4_nav.png" style="height: 170px;width: 170px;" alt="Mercurial silver">
+          <label class="form-check-label" for="radio1"> Mercurial Silver</label> 
+         
+        </div>
+      </div>
+      <div class="form">
+        <div id="img7" class="form-check"  >
+          <input type="radio" class="form-check-input" id="radio1" name="color-nord4" data-color="Oasis Green" data-image="nord4series.png">
+          <img  src="nord4series.png" style="height: 170px;width: 170px;" alt="Mercurial silver">
+          <label class="form-check-label" for="radio1">Oasis Green</label> 
+         
+        </div>
+      </div>
+      <div class="form">
+        <div id="img7" class="form-check"  >
+          <input type="radio" class="form-check-input" id="radio1" name="color-nord4" data-color="Obsiden Midnight" data-image="nord4series2.png">
+          <img src="nord4series2.png" style="height: 170px;width: 170px;" alt="Mercurial silver">
+          <label class="form-check-label" for="radio1"> Obsiden Midnight</label> 
+         
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+  <button onclick="addToCart('nord4')" data-aos="fade-down" data-aos-duration="2000" style="border-radius: 50%; border:10px double black ;">Add to Cart</button>
+<!-- tabs for speciality -->
+ <div class="container-fluid mt-5" style="background-color: black;color: white;" data-aos="fade-down" data-aos-duration="2000">
+  <ul class="nav nav-tabs justify-content-center" style="background-color: black;color: white;"> 
+    <li class="nav-item" > 
+    <a class="nav-link active" data-bs-toggle="tab" href="#demo33">Metal body</a> 
+    
+    </li> 
+    <li class="nav-item" > 
+    <a class="nav-link" data-bs-toggle="tab" href="#demo2">Processor</a> 
+     </li> 
+    <li class="nav-item" > 
+    <a class="nav-link" data-bs-toggle="tab" href="#demo3">Battery</a> 
+  </li> 
+    <li class="nav-item" > 
+      <a class="nav-link" data-bs-toggle="tab" href="#demo4">Display</a> 
+     </li> 
+      <li class="nav-item"> 
+        <a class="nav-link" data-bs-toggle="tab" href="#demo5">Camera</a> 
+          </li> 
+        <li class="nav-item" >  
+          <a class="nav-link" data-bs-toggle="tab" href="#demo6">AI</a> 
+         </li> 
+          
+    </ul>
+<div class="tab-content " style="background-color: black;color: white;">
+ <div id="demo33" class="container tab-pane active" >
+  <h1>The only metal unibody 5G smartphone on the market.</h1>
+  <div class="container">
+    <img id="img7" class="tab_img" src="high_nord.jpg" alt="mtal body" >
+  </div>
+  <div class="container-fluid">
+    <div class="d-flex p-3" style="border: 2px double white;">
+        <div class="p-4  flex-fill" style="border: 2px dotted white;">
+       <h1>0.80cm</h1>
+       <br>
+       <h5>Ultra-thin body</h5>
+        </div>
+        <div class="p-4 flex-fill" style="border: 2px dotted white;">
+          <h1>0.14cm</h1>
+          <br>
+          <h5>Ultra-thin bazel</h5>
+        </div>
+        <div class="p-4 flex-fill" style="border: 2px dotted white;">
+        <h5>*the claim of being the only metalunibody 5G smartphone on a market refer
+           specifically to OnePlus'sales regions and not all global market</h5>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+ <div id="demo2" class="container tab-pane"  data-aos="fade-down" data-aos-duration="2000">
+  <h1>Latest 2024 Snapdragon 7 Plus Gen 3 for SeamLess Multitasking.</h1>
+  <div class="container">
+    <img id="img7" class="tab_img" src="high_nord_2.jpg" alt="Processor">
+  </div>
+  <div class="container-fluid p-2">
+    <div class="d-flex p-3" style="border: 10px double white;">
+        <div class="p-3  flex-fill" style="border: 2px dotted white;">
+       <h1>Up to 65%</h1>
+       <br>
+       <h5>Faster CPU*</h5>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+          <h1>Up to 130%</h1>
+          <br>
+          <h5>Graphics improvment*</h5>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+          <h1>Up to 12GB</h1>
+          <br>
+          <h5>LPDDR5X RAM</h5>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+        <h5>
+          *Data comes from OnePlus Test Laboratory
+        </h5>
+        <h6>Actual performance on the device may vary</h6>
+        </div>
+        
+    </div>
+</div>
+  
+ </div>
+ <div id="demo3" class="container tab-pane" data-aos="fade-down" data-aos-duration="2000">
+  <h1>5500mAh Biggest OnePlus Battery ever.100W Fastest Charging on a Nord.</h1>
+  <div class="container">
+    <img id="img7" class="tab_img" src="high_nord_4.jpg" alt="Battery" >
+  </div>
+  <div class="container-fluid p-2">
+    <div class="d-flex p-3" style="border: 10px double white;">
+        <div class="p-3  flex-fill" style="border: 2px dotted white;">
+       <h1>28 mins</h1>
+       <h6> to 100% with 100W SUPERVOOC Adapter</h6>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+          <h1>5Hrs of Netfilx</h1>
+          
+          <h6>On a 5-minute charge</h6>
+        </div>
+    </div>
+</div>
+   
+ </div>
+
+ <div id="demo4" class="container tab-pane" data-aos="fade-down" data-aos-duration="2000">
+  <h1>Brightest 120Hz AMOLED ever seen on a Nord.</h1>
+  <div class="container">
+    <img id="img7"class="tab_img" src="high_nord_5.jpg" alt="Display" >
+  </div>
+  <div class="container-fluid p-2">
+    <div class="d-flex p-3" style="border: 10px double white;">
+        <div class="p-3  flex-fill" style="border: 2px dotted white;">
+       <h2>2150 nits</h2>
+       <h6>Peak brightness</h6>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+          <h1>1.5K</h1>
+          <h5>High Resolution</h5>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+          <h1>Aqua Touch</h1>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+       <h1>Ultra HDR support</h1>
+        </div>
+        <div class="p-3 flex-fill" style="border: 2px dotted white;">
+          <h1>Eye Care Intelligence</h1>
+           </div>
+   </div>
+</div>
+  
+ </div>
+ <div id="demo5" class="container tab-pane" data-aos="fade-down" data-aos-duration="2000">
+  <h1>Sony Dual combo for all-day portrait brilliance.</h1>
+  <div class="container">
+    <img id="img7" class="tab_img" src="high_nord_6.jpg" alt="Camera" >
+  </div>
+  <div class="container-fluid p-2">
+    <div class="d-flex p-3" style="border: 10px double white;">
+        <div class="p-2  flex-fill" style="border: 2px dotted white;">
+       <h1>AI Groufies</h1>
+        </div>
+        <div class="p-2 flex-fill" style="border: 2px dotted white;">
+          <h1>Flagship-level HDR Alogrithm</h1>
+        </div>
+        <div class="p-2 flex-fill" style="border: 2px dotted white;">
+          <h1>Snapdragon Processing</h1>
+         </div>
+    </div>
+</div>  
+ </div>
+
+ <div id="demo6" class="container tab-pane" data-aos="fade-down" data-aos-duration="2000">
+  <h1>AI start's with Nord.</h1>
+  <div class="container">
+    <img id="img7" class="tab_img" src="high_nord_7.jpg" alt="A.I">
+  </div>
+  <div class="container-fluid p-2">
+    <div class="d-flex p-3" style="border: 10px double white;">
+        <div class="p-2  flex-fill" style="border: 2px dotted white;">
+       <h1>AI Summary</h1>
+        </div>
+        <div class="p-2 flex-fill" style="border: 2px dotted white;">
+          <h1>AI Eraser</h1>
+        </div>
+        <div class="p-2 flex-fill" style="border: 2px dotted white;">
+          <h1>AI Writer</h1>
+         </div>
+    </div>
+</div>
+ </div>
+ 
+ 
+</div>
+</div>
+
+    
+    </div>
+     <div id="nord4ce" class="container tab-pane" data-aos="flip-down" data-aos-duration="2000">
+      <div class="container-fluid" >
+          <h5 style="color: red;">7% OFF</h5>
+          <!-- <br> -->
+          <h2>OnePlus Nord CE 4</h2>
+          <!-- <br> -->
+          <h6 style="color: gray;">8GB RAM + 256 GB Storage | Celadon Marble</h6>
+          <!-- <br> -->
+          <h4 style="color: gray;">₨ 24,999 Before Exchange</h4>
+             <div style="color: gray;">
+          M.R.P
+          <a style="text-decoration: line-through;">₨ 26,999</a>
+          (inclusive of all taxes)
+      </div>
+      <div class="container-fluid" style="height: 200px;width: 500px;" id="car11">
+      <div id="demo1" class="carousel slide" data-bs-ride="carousel" >
+          <div class="carousel-indicators">
+            <button data-bs-target="#demo1" data-bs-slide-to="0" class="active"> </button>
+                <button data-bs-target="#demo1" data-bs-slide-to="1"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000s">
+              <img  src="nordce4green.png" class="d-block w-100"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="1000s">
+              <img  src="nordce4black.png" class="d-block w-100"/>
+            </div>  
+             
+          </div>
+        <button class="carousel-control-prev" data-bs-target="#demo1" data-bs-slide="prev">
+            <span  class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#demo1" data-bs-slide="next">
+            <span  class="carousel-control-next-icon"></span>
+        </button>
+        
+         </div>
+      </div>
+      
+  </div>
+  <div clas="container" style="margin-top: 32%;" data-aos="fade-down" data-aos-duration="2000">
+   <h6>The minimum fixed price is: ₹24,999</h6>
+  <h6>Enjoy extra discount using OnePlus Corporate Employee Program. Limited Eligibilty.</h6>
+  <h6>Benefits worth ₹2250 for JioPlus Postpaid Users.</h6>
+  <h6>Save up to 18% on business purchases.</h6>   
+  <h3 style="text-decoration: underline;">ROM</h3> 
+  
+  
+  </div>
+  <div class="d-flex justify-content-around" data-aos="flip-left" data-aos-duration="2000">
+    <!-- <div class="bg-info" > -->
+      <div class="form">
+        <div class="form-check"  style="border: 2px solid black;">
+          <input type="radio" class="form-check-input" id="radio1" name="ramStorage-nordce4" value="8GB RAM + 128 GB Storage | ₹22,999" >8GB RAM + 128 GB Storage
+         <label class="form-check-label" >~22,999</label> 
+         
+        </div>
+      </div>
+   
+      <div class="form">
+        <div class="form-check"  style="border: 2px solid black;">
+          <input type="radio" class="form-check-input" id="radio1" name="ramStorage-nordce4" value="8GB RAM + 256 GB Storage | ₹24,999" checked>8GB RAM + 256 GB Storage
+          <label class="form-check-label" > ~24,999</label> 
+         
+        </div>
+      </div>
+    
+   </div>
+   <h3 style="text-decoration: underline;" data-aos="flip-right" data-aos-duration="2000">Available Colors</h3> 
+   <div class="d-flex justify-content-around" data-aos="flip-right" data-aos-duration="2000">
+      <!-- <div class="bg-info" > -->
+        <div class="form">
+          <div id="img7" class="form-check" >
+            <input type="radio" class="form-check-input" id="radio1" value="option1" name="color-nordce4" data-color="Celadon Marble" data-image="nordce4green.png" checked>
+            <img  src="nordce4green.png" style="height: 200px;width: 200px;" alt="Celadon Marble">
+            <label class="form-check-label" for="radio1"> Celadon Marble</label> 
+           
+          </div>
+        </div>
+      <!-- </div> -->
+      <!-- <div class="bg-daner"> -->
+        <div id="img7" class="form ">
+          <div class="form-check"  >
+            <input type="radio" class="form-check-input" id="radio1" value="option1" name="color-nordce4" data-color="Custom Black" data-image="nordce4black.png">
+            <img  src="nordce4black.png" style="height: 200px;width: 200px;" alt="Custom Black">
+            <label class="form-check-label" for="radio1">Custom BLack</label> 
+            
+          </div>
+        </div>
+        
+      </div>
+      <button onclick="addToCart('nordce4')" data-aos="fade-down" data-aos-duration="2000" style="border-radius: 50%; border:10px double black ;">Add to Cart</button>
+  <!-- tabs for speciality -->
+   <div class="container-fluid mt-5" style="background-color: black;color: white;" data-aos="flip-up" data-aos-duration="2000">
+    <ul class="nav nav-tabs justify-content-center" style="background-color: black;color: white;"> 
+    
+      <li class="nav-item" > 
+      <a class="nav-link active" data-bs-toggle="tab" href="#demo22">Processor</a> 
+       </li> 
+      <li class="nav-item" > 
+      <a class="nav-link" data-bs-toggle="tab" href="#demo34">Battery</a> 
+    </li> 
+      <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#demo44">Display</a> 
+       </li> 
+        <li class="nav-item"> 
+          <a class="nav-link" data-bs-toggle="tab" href="#demo54">Camera</a> 
+            </li> 
+          <li class="nav-item" >  
+            <a class="nav-link" data-bs-toggle="tab" href="#demo64">AI</a> 
+           </li> 
+            
+      </ul>
+  <div class="tab-content" style="background-color: black;color: white;">
+  
+   <div id="demo22" class="container tab-pane active">
+    <h1>This exceptional dragon delivers effortless multi-tasking and insane power efficiency</h1>
+    <div class="container-fluid">
+      <img id="img7" class="tab_img" src="ce_processor.jpg" alt="Processor" >
+    </div>
+    
+   </div>
+   <div id="demo34" class="container tab-pane">
+    <h1>This enormous battery and speedy fast charging give you over a day of battery life for gaming, browsing, and streaming your favorite content.</h1>
+    <div class="container-fluid">
+      <img id="img7" class="tab_img" src="ce_battery.jpg" alt="Battery" >
+    </div>
+     
+   </div>
+  
+   <div id="demo44" class="container tab-pane">
+    <h1>A smooth and beautiful display that swipes well when wet</h1>
+    <div class="container-fluid p-2">
+        <div class="d-flex p-3" style="border: 10px double white;">
+            <div class="p-3  flex-fill" style="border: 2px dotted white;">
+                <h2>120Hz AMOLED Display</h2>
+                <!-- <h6>Peak brightness</h6> -->
+            </div>
+           
+            <div class="p-3 flex-fill" style="border: 2px dotted white;">
+                <h1>Aqua Touch</h1>
+            </div>
+           
+        </div>
+    </div>
+    <div class="container">
+      <img id="img7" class="tab_img" src="ce_display.jpg" alt="Display">
+    </div>
+    
+   </div>
+   <div id="demo54" class="container tab-pane">
+    <h1>Sony Dual combo for all-day portrait brilliance.</h1>
+    <div class="container">
+      <img id="img7" class="tab_img" src="ce_camera.jpg" alt="Camera">
+    </div>
+    
+   </div>
+  
+   <div id="demo64" class="container tab-pane">
+    <h1>AI start's with Nord.</h1>
+    <div class="container">
+      <img id="img7" class="tab_img" src="high_nord_7.jpg" alt="A.I" >
+    </div>
+    <div class="container-fluid p-2">
+      <div class="d-flex p-3" style="border: 10px double white;">
+         
+          <div class="p-2 flex-fill" style="border: 2px dotted white;">
+            <h1>AI Eraser</h1>
+          </div>
+          <div class="p-2 flex-fill" style="border: 2px dotted white;">
+            <h1>AI Writer</h1>
+           </div>
+      </div>
+  </div>
+   </div>
+   
+   
+  </div>
+  </div>
+ 
+      
+      
+     </div>
+     <div id="nord4celite" class="container tab-pane" data-aos="fade-down" data-aos-duration="2000">
+      <div class="container-fluid" data-aos="fade-down" data-aos-duration="2000" >
+          <h5 style="color: red;">12% OFF</h5>
+          <!-- <br> -->
+          <h2>OnePlus Nord CE 4 Lite</h2>
+          <!-- <br> -->
+          <h6 style="color: gray;">8GB RAM + 256 GB Storage | Super Silver</h6>
+          <!-- <br> -->
+          <h4 style="color: gray;">₨ 20,999 Before Exchange</h4>
+         
+      <div style="color: gray;">
+          M.R.P
+          <a style="text-decoration: line-through;">₨ 23,999</a>
+          (inclusive of all taxes)
+      </div>
+      <div class="container-fluid" style="height: 200px;width: 500px;" id="car11">
+      <div id="demo122" class="carousel slide" data-bs-ride="carousel" >
+          <div class="carousel-indicators">
+            <button data-bs-target="#demo122" data-bs-slide-to="0" class="active"> </button>
+                <button data-bs-target="#demo122" data-bs-slide-to="1"></button>
+                <button data-bs-target="#demo122" data-bs-slide-to="2"></button>
+                <button data-bs-target="#demo122" data-bs-slide-to="3"></button>
+                
+            
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000s">
+                <img src="caro_lite.webp" class="d-block w-100"/>
+                </div>
+            <div class="carousel-item" data-bs-interval="1000s">
+              <img src="rad_liteorange.png" class="d-block w-100"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="1000s">
+              <img src="rad_liteblue.png" class="d-block w-100"/>
+               </div>  
+            <div class="carousel-item" data-bs-interval="1000s">
+              <img src="rad_liteblack.png" class="d-block w-100"/>
+                </div>  
+          </div>
+        <button class="carousel-control-prev" data-bs-target="#demo122" data-bs-slide="prev">
+            <span  class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#demo122" data-bs-slide="next">
+            <span  class="carousel-control-next-icon"></span>
+        </button>
+        
+         </div>
+      </div>
+      
+  </div>
+  <div clas="container" style="margin-top: 32%;" data-aos="fade-down" data-aos-duration="2000">
+   <h6>The minimum fixed price is: ₹20,999</h6>
+  <h6>Avail Flexi exchange along with Instant Bank Discount</h6>
+  <h6>Benefits worth ₹2250 for JioPlus Postpaid Users.</h6>
+  <h3 style="text-decoration: underline;" data-aos="fade-up" data-aos-duration="2000">ROM & STORAGE</h3> 
+  </div>
+  <div class="d-flex justify-content-around">
+    <div id="img7" class="form" data-aos="fade-up" data-aos-duration="2000">
+        <div class="form-check"  style="border: 2px solid black;">
+          <input type="radio" class="form-check-input" id="radio1"  name="ramStorage-nordce4lite" value="8GB RAM + 128 GB Storage | ₹17,999">8GB RAM + 128 GB Storage
+         <label class="form-check-label" >~17,999</label> 
+         
+        </div>
+      </div>
+   <div id="img7" class="form" data-aos="fade-up" data-aos-duration="2000">
+        <div class="form-check"  style="border: 2px solid black;">
+          <input type="radio" class="form-check-input" id="radio1"  name="ramStorage-nordce4lite" value="8GB RAM + 256 GB Storage | ₹20,999" checked>8GB RAM + 256 GB Storage
+          <label class="form-check-label"> ~20,999</label> 
+         
+        </div>
+      </div>
+   </div>
+   <h3 style="text-decoration: underline;" data-aos="fade-up" data-aos-duration="2000">Available Colors</h3> 
+   <div class="d-flex justify-content-around" >
+      <div class="form">
+          <div id="img7" class="form-check" data-aos="fade-up" data-aos-duration="2000">
+            <input type="radio" class="form-check-input" id="radio1" value="option1" name="color-nordce4lite" data-color="Mega Blue" data-image="rad_liteblue.png" checked>
+            <img  src="rad_liteblue.png" style="height: 160px;width: 160px;" alt="Mega Blue">
+            <label class="form-check-label" for="radio1">  Mega Blue</label> 
+           
+          </div>
+        </div>
+      <div id="img7" class="form">
+          <div class="form-check" data-aos="fade-up" data-aos-duration="2000"  >
+            <input type="radio" class="form-check-input" id="radio1" name="color-nordce4lite" data-color="Super Silver" data-image="rad_liteblack.png">
+            <img src="rad_liteblack.png" style="height: 170px;width: 170px;" alt="Super silver">
+            <label class="form-check-label" for="radio1">Super Silver</label> 
+           
+          </div>
+        </div>
+     <div id="img7" class="form">
+          <div class="form-check" data-aos="fade-up" data-aos-duration="2000">
+            <input type="radio" class="form-check-input" id="radio1" name="color-nordce4lite" data-color="Ultra Orange" data-image="rad_liteorange.png">
+            <img src="rad_liteorange.png" style="height: 170px;width: 170px;" alt="Ultra orange">
+            <label class="form-check-label" for="radio1">Ultra Orange</label> 
+           
+          </div>
+        </div>
+     </div>
+     <button onclick="addToCart('nordce4lite')" data-aos="fade-up" data-aos-duration="2000" style="border-radius: 50%; border:10px double black ;">Add to Cart</button>
+  <!-- tabs for speciality -->
+   <div class="container-fluid mt-5" style="background-color: black;color: white;" data-aos="fade-up" data-aos-duration="2000">
+    <ul class="nav nav-tabs justify-content-center" style="background-color: black;color: white;"> 
+       <li class="nav-item" > 
+      <a class="nav-link active" data-bs-toggle="tab" href="#demo25">Processor</a> 
+       </li> 
+      <li class="nav-item" > 
+      <a class="nav-link" data-bs-toggle="tab" href="#demo355">Battery</a> 
+    </li> 
+      <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#demo45">Display</a> 
+       </li> 
+        <li class="nav-item"> 
+          <a class="nav-link" data-bs-toggle="tab" href="#demo55">Camera</a> 
+            </li> 
+          <li class="nav-item" >  
+            <a class="nav-link" data-bs-toggle="tab" href="#demo65">Speaker</a> 
+           </li> 
+            
+      </ul>
+  <div class="tab-content " style="background-color: black;color: white;">
+ 
+   <div id="demo25" class="container tab-pane active">
+    <h1>The Do-it all powered by Snapdragon 695 processor.</h1>
+    <div class="container">
+      <img id="img7" src="lite_processor.jpg" alt="Processor" class="tab_img">
+    </div>
+    
+   </div>
+   <div id="demo355" class="container tab-pane">
+    <h1>Ditch the power bank and press play all day. You'll even have enough juice to charge up your buddy's phone with reverse wired charging</h1>
+    <div class="container">
+      <img id="img7" src="lite_battery.jpg" alt="Battery" class="tab_img">
+    </div>
+   </div>
+  
+   <div id="demo45" class="container tab-pane">
+    <h1>Dive into a world of bold color and crisp visuals with the 16.94 cm 120 Hz AMOLED display</h1>
+    <div class="container">
+      <img id="img7" src="litedisplay.jpg" alt="Display" class="tab_img">
+    </div>
+    <div class="container-fluid p-2">
+      <div class="d-flex p-3" style="border: 10px double white;">
+          <div class="p-3  flex-fill" style="border: 2px dotted white;">
+         <h2>2150 nits</h2>
+         <h6>Peak brightness</h6>
+          </div>
+         
+          <div class="p-3 flex-fill" style="border: 2px dotted white;">
+            <h1>Aqua Touch</h1>
+          </div>
+         
+          <div class="p-3 flex-fill" style="border: 2px dotted white;">
+            <h1>120Hz AMOLED</h1>
+             </div>
+     </div>
+  </div>
+    
+   </div>
+   <div id="demo55" class="container tab-pane">
+    <h1>The 50MP Sony LYT-600 main camera puts the power to take beautiful Sony-quality photos and videos in the palm of your hand</h1>
+    <div class="container">
+      <img id="img7" src="lite_camera.jpg" alt="Camera" class="tab_img">
+    </div>
+    <div class="container-fluid p-2">
+      <div class="d-flex p-3" style="border: 10px double white;">
+          <div class="p-2  flex-fill" style="border: 2px dotted white;">
+         <h1>50MP</h1>
+         <p>Sony LYT-600</p>
+          </div>
+          <div class="p-2 flex-fill" style="border: 2px dotted white;">
+            <h1>Anti-Shake OIS</h1>
+          </div>
+          <div class="p-2 flex-fill" style="border: 2px dotted white;">
+            <h1>2X In-Sensor Zoom</h1>
+           </div>
+      </div>
+  </div>  
+   </div>
+  
+   <div id="demo65" class="container tab-pane">
+    <h1>Sorry about shouting in all-caps, but that's the only correct way to express how loud Nord CE4 Lite's dual stereo speakers get when you turn on 300% Ultra Volume Mode.</h1>
+    <div class="container">
+      <img id="img7" src="lite_speaker.jpg" alt="A.I" class="tab_img">
+    </div>
+    <div class="container-fluid p-2">
+      <div class="d-flex p-3" style="border: 10px double white;">
+          <div class="p-2  flex-fill" style="border: 2px dotted white;">
+         <h1>300%</h1>
+         <p>Ultra Volume Mode</p>
+          </div>
+          <div class="p-2 flex-fill" style="border: 2px dotted white;">
+            <h1>Dual Stereo Speakers</h1>
+          </div>
+          <div class="p-2 flex-fill" style="border: 2px dotted white;">
+            <h1>3.5mm Headphone Jack</h1>
+           </div>
+      </div>
+  </div>
+   </div>
+   
+   
+  </div>
+  </div>
+ 
+     </div>
+    
+    </div>
+    </div>
+    </div>
+      
+    <div class="container-fluid" style="background-color: black; border: 7px double white;" data-aos="zoom-in" data-aos-duration="3000">
+    <div class="row">
+        <div class="col p-3" style="color: aliceblue;">
+            <h4>
+                Phones
+            </h4>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Store
+                </h1>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Support
+            </h4>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Explore
+            </h4>
+        </div>
+       
+    </div>
+    <div class="row" style="border: 2px solid white;">
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page13.html" style="text-decoration: none;" >
+                    OnePlus 13 series
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_ipad2.html" style="text-decoration: none;">
+                    Tablet
+                </a>
+
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#repair" style="text-decoration: none;">
+                    Service center
+                </a>
+
+
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#comunity" style="text-decoration: none;">
+                Our Communtiy
+                </a>
+
+            </h6>
+        </div>
+       
+    </div>
+    <div class="row" style="border: 2px solid white;">
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_nord4.html" style="text-decoration: none;">
+                    OnePlus Nord 4
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_watch2.html" style="text-decoration: none;">
+                    Wearable
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#repair" style="text-decoration: none;">
+                    Repair Service
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#os" style="text-decoration: none;">
+                    Our Os Operating system
+                </a>
+            </h6>
+        </div>
+           
+    </div>
+    
+</div>   
+
+
+   <!-- AOS JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   <script>
+       AOS.init();
+   </script>
+<!--  to referesh aos using javascript -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.nav-link').forEach(tab => {
+          tab.addEventListener('shown.bs.tab', function (event) {
+              AOS.refresh();
+          });
+      });
+  });
+</script>
+
+    </body>
+</html>

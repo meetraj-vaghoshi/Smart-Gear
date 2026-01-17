@@ -1,0 +1,844 @@
+<html>
+    <head>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+      />
+      <title>Smart Gear Ipad</title>
+      <link rel="icon" type="image/x-icon" href="logo 4.jpg">
+      <link rel="stylesheet" href="home.css">
+   
+          <!-- AOS CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,maximum-scale=0.5,minimum-scale=01">
+      <style>
+    
+.navbar {
+    font-size: 21px;
+    z-index: 1000; /* Ensures navbar stays on top of other content */
+}
+
+.navbar .navbar-brand {
+    color: black;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: black;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+    display: inline-block; /* Make sure the link is treated as inline-block for correct positioning */
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%; /* Full width when hovered */
+}
+
+.nav .nav-link {
+    /* color: white; */
+    position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+    display: inline-block; /* Make sure the link is treated as inline-block for correct positioning */
+}
+
+.nav .nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color:blue;
+    display: block;
+    position: absolute;
+    bottom: -2px; /* Position it just below the link */
+    left: 0; /* Align it to the left of the link */
+    transition: width 0.8s; /* Smooth transition for width */
+}
+
+/* .nav .nav-link:hover {
+    color:white;
+} */
+
+.nav .nav-link:hover::after {
+    width: 100%; /* Full width when hovered */
+}
+
+        .dropdown-menu{
+         display: none;
+         position: absolute;
+         text:black;
+         min-width: 150px;
+         opacity: 0;
+         animation:  fadeInSlideDown 1s Forwards;
+         z-index: 1;
+        }
+        .dropdown-menu a{
+         color: aliceblue;
+         text-decoration: underline;
+                display: none;
+        }
+        .dropdown-menu a:hover{
+         background-color: aliceblue;
+         z-index: 10;
+        }
+        .nav-item:hover .dropdown-menu{
+                 display: block;
+        display: block;
+        }
+        .dropdown-item {
+         margin-bottom: 15px;
+         text-align: center;
+        }
+        .dropdown-item img{
+         width: 100%;
+         max-width: 150px;
+         height: auto;
+         border-radius: 5px;
+        }
+        .dropdown-item a{
+         color: white;
+         text-decoration: none;
+         display: hidden;
+         margin-top: 10px;
+         font-weight: bold;
+        }
+        .text-black{
+         color: black;
+        }
+        @keyframes fadeInSlideDown {
+         0%{
+             opacity: 0;
+             transition: translateY(-10px);
+         }
+         100%{
+             opacity: 1;
+             transform: translateY(0);
+         }
+        }
+        h6{
+         color: grey;
+        }
+        #img2:hover{
+            border: 5px double   white;
+            box-shadow: 0 0 20px 0 white;
+        } 
+        #img1:hover{
+            border: 5px double   black;
+            box-shadow: 0 0 20px 0 black;
+        }
+       
+        #img{
+            max-width: auto;
+            height: auto;
+        }
+        a{
+            color: gray;
+            text-decoration: none;
+        }
+        .tab_img{
+            z-index: -1;
+            height: 500px;
+            width:100%;
+            object-fit: cover;
+            border-radius: 7%;
+        }
+         /* For smaller screens (phones) */
+  @media (max-width: 767px) {
+    .carousel-item img {
+      max-height: 300px; /* Adjust for mobile screens */
+      object-fit: cover;
+    }
+  }
+
+  /* For tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .carousel-item img {
+      max-height: 400px; /* Adjust for tablet screens */
+      object-fit: cover;
+    }
+  }
+  /* For smaller screens (phones) */
+  @media (max-width: 767px) {
+    .form-check img {
+      max-height: 140px; /* Adjust image height for mobile screens */
+      width: 70% !important; /* Make sure the image takes more width */
+      object-fit: contain;
+    }
+  }
+
+  /* For tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .form-check img {
+      max-height: 170px; /* Adjust image height for tablet screens */
+      width: 75% !important; /* Adjust width */
+      object-fit: contain;
+    }
+  }
+
+  /* For larger screens (desktops, laptops) */
+  @media (min-width: 1025px) {
+    .form-check img {
+      max-height: 170px; 
+      /* Adjust image height for desktop */
+      width: 75% !important;
+       /* Adjust width for larger screens */
+      object-fit: contain;
+    }
+  }
+  /* tab text */
+  /* For smaller screens (phones) */
+  @media (max-width: 767px) {
+    #demo22 h1 {
+      font-size: 1.5rem; /* Reduce font size for mobile */
+    }
+    #demo22 h6 {
+      font-size: 1rem; /* Reduce font size for mobile */
+    }
+    #car11{
+      width: auto!important;
+      height: 200px!important;
+    }
+   
+    .d-flex {
+      flex-direction: column; /* Stack the flex items vertically for small screens */
+    }
+    .p-2, .p-3 {
+      padding: 5px; /* Reduce padding inside the flex items */
+    }
+  }
+
+  /* For tablets (768px to 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #demo22 h1 {
+      font-size: 1.75rem; /* Adjust font size for tablets */
+    }
+    #demo22 h6 {
+      font-size: 1.2rem; /* Adjust font size for tablets */
+    }
+  
+    .d-flex {
+      flex-direction: row; /* Arrange the flex items in a row for tablets */
+    }
+  }
+
+  /* For larger screens (desktops, laptops) */
+  @media (min-width: 1025px) {
+    #demo22 h1 {
+      font-size: 2rem; /* Larger font size for desktops */
+    }
+    #demo22 h6 {
+      font-size: 1.25rem; /* Larger font size for desktops */
+    }
+    
+  }
+  #img7:hover{
+            /* one for all */
+            border: 5px double   white;
+            box-shadow: 0 0 20px 0 white;
+            /* opacity: 0; */
+            animation: fadeInSlideDown3 2s Forwards;
+            z-index: 1;
+       
+        }
+        @keyframes fadeInSlideDown3 {
+            /* 13 ce */
+            0% {
+                opacity: 0;
+                transition: translateY(-1px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(5px);
+                
+            }
+            
+        }
+     </style>
+     <script>
+     function addToCart(product) {
+    let name;
+    if (product === 'ipad2') name = "Oneplus Ipad 2";
+    else name = "Oneplus Ipad";
+
+    // Get selected RAM & Storage option
+    let ramStorage = document.querySelector(`input[name="ramStorage-${product}"]:checked`);
+    let model = ramStorage ? ramStorage.value.split('|')[0] : "12GB RAM + 256GB Storage";
+    let price = parseInt(ramStorage.value.split('|')[1].replace(/[^0-9]/g, ''));
+
+    // Get selected color & corresponding image
+    let colorOption = document.querySelector(`input[name="color-${product}"]:checked`);
+    let color = colorOption ? colorOption.dataset.color : "Default Color";
+    let image = colorOption ? colorOption.dataset.image : "default.png";
+
+    // Save to cart using session storage
+    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+    cart.push({ name, price, model, color, image, quantity: 1 });
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+}
+
+   </script>
+   
+    </head>
+    <body style=" background:  url(home2.jpg);">
+    <div class="container">
+       <nav class="navbar navbar-expand-lg navbar-light justify-content-center"  data-aos="fade-down" data-aos-duration="2000">
+          <div class="container">
+              <a class="navbar-brand" >
+                  <img src="Logo 4.jpg" style="width:90px;height:90px;" class="rounded-pill"/>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav justify-content-center">
+                      <li class="nav-item">
+                          <a class="nav-link" id="t2" style="color: white;" href="loading_page_home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t3">Phone</a>
+                          <ul class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <!-- <h4 class="dropdown-header">Our Flasgship Series </h4> -->
+                              <li class="dropdown-item">
+                                  <div class="container">
+                                      <div class="d-flex p-2 flex-row">
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page13.html" id="zoom_out" target="_blank" class="text-black">
+                                                  <img src="12.png"  style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page13.html" target="_blank" class="text-black" id="zoom_out">Flasgship</a>
+                                          </div>
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_nord4.html" target="_blank" class="text-black">
+                                                  <img src="4_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_nord4.html" target="_blank" class="text-black" id="zoom_out">Nord</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" style="color: white;" id="t2">Tablet</a>
+                          <ul class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <li class="dropdown-item">
+                                  <div class="container">
+                                      <div class="d-flex p-2 flex-row">
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_ipad2.html" target="_blank" class="text-black">
+                                                  <img src="pad2_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_ipad2.html" target="_blank" class="text-black" id="zoom_out">OnePlus Pad 2</a>
+                                          </div>
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_ipad.html" target="_blank" class="text-black">
+                                                  <img src="tab.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_ipad.html" target="_blank" class="text-black" id="zoom_out">OnePlus Pad</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">Wearable</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <li class="dropdown-item">
+                                  <div class="container">
+                                      <div class="d-flex p-2 flex-row">
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_watch2.html" target="_blank" class="text-black">
+                                                  <img src="2_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_watch2.html" target="_blank" class="text-black" id="zoom_out">OnePlus Watch 2</a>
+                                          </div>
+                                          <div class="p-2 flex-fill">
+                                              <a href="loading_page_watch2r.html" target="_blank" class="text-black">
+                                                  <img src="2r_nav.png" id="zoom_out" style="height: 100px;width: 100px;"/>
+                                              </a>
+                                              <a href="loading_page_watch2r.html" target="_blank" class="text-black" id="zoom_out">OnePlus Watch 2R</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">OneTopia</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <h4 class="dropdown-header"> Evolve Your Digital life</h4>
+                              <li class="dropdown-item">
+                                  <a href="index.html#photo"  class="text-black" id="zoom_out">2024 Oneplus Photo Awards</a>
+                              </li>
+                              <li class="dropdown-item">
+                                  <a href="index.html#os"  class="text-black" id="zoom_out">Oxygen Os</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">Community</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <h4 class="dropdown-header"> Welcome To Oneplus Community</h4>
+                              <li class="dropdown-item">
+                                  <a href="index.html#comunity"  class="text-black" id="zoom_out">Power of Community</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" style="color: white;" id="t2">Support</a>
+                          <ul id="y1" class="dropdown-menu bg-white" style="margin-top: -1px; z-index: 1050; position: absolute;">
+                              <h4 class="dropdown-header" >Welcome To OnePlus Support</h4>
+                              <li class="dropdown-item">
+                                  <a href="index.html#repair"  id="zoom_out" class="text-black">Repair Service</a>
+                              </li>
+                              <li class="dropdown-item">
+                                  <a href="index.html#photo"  id="zoom_out" class="text-black">Service Record</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item" >
+                          <a class="nav-link" href="loading_page_cart.html" style="color: white;" id="t2">Go To Cart</a>
+                      </li>
+                  </ul>
+              </div>
+                
+          </div>
+      </nav>
+    <div class=" container-fluid-md mt-5" style="background-color: black;color: white;" data-aos="fade-down" data-aos-duration="2000">
+      <ul class="nav nav-tabs justify-content-center" style="background-color: black;color: white;"> 
+        <li class="nav-item" > 
+        <a class="nav-link active" data-bs-toggle="tab" href="#nord4">Oneplus Ipad 2</a> 
+        </li> 
+        <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#nord4ce">Oneplus Ipad</a> 
+         </li> 
+        </ul>
+    <div class="tab-content " style="background-color: black;color: white;" data-aos="fade-down" data-aos-duration="2000">
+     <div id="nord4" class="container tab-pane active" data-aos="fade-down" >
+        <div class="container-fluid" >
+            <h5 style="color: red;">10% OFF</h5>
+            <!-- <br> -->
+            <h2>OnePlus Pad 2</h2>
+            <!-- <br> -->
+            <h6 style="color: gray;">8GB RAM + 128 GB Storage | Nimbus Gray</h6>
+            <!-- <br> -->
+            <h4 style="color: gray;">₨ 39,999 Before Exchange</h4>
+          
+        <div style="color: gray;">
+            M.R.P
+            <a style="text-decoration: line-through;">₨ 42,999</a>
+            (inclusive of all taxes)
+        </div>
+        <div class="container-fluid" style="height: 200px;width: 500px;" id="car11">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-indicators">
+              <button data-bs-target="#demo" data-bs-slide-to="0" class="active"> </button>
+                  <button data-bs-target="#demo" data-bs-slide-to="1"></button>
+                  
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="1000s">
+                  <img src="tablet\\car_pad2.webp" class="d-block w-100"/>
+                
+          
+              </div>
+              <div class="carousel-item" data-bs-interval="1000s">
+                <img src="tablet\\car1_pad2.png" class="d-block w-100" />
+                
+                  
+              </div>
+                
+                
+            </div>
+          <button class="carousel-control-prev" data-bs-target="#demo" data-bs-slide="prev">
+              <span  class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" data-bs-target="#demo" data-bs-slide="next">
+              <span  class="carousel-control-next-icon"></span>
+          </button>
+          
+           </div>
+        </div>
+        
+    </div>
+<div clas="container" style="margin-top: 35%;" data-aos="fade-down" data-aos-duration="2000">
+    <h6>The minimum fixed price is: ₹39,999</h6>
+    <h6>Save up to ₹3000 exchange bonus.</h6>
+    <h6>Enjoy up to ₹1,000 Off using OnePlus Student Program.</h6>
+    <h6>Enjoy up to ₹1500 Off using OnePlus Corporate Employee Program. Limited eligibility.</h6>   
+    <h3 style="text-decoration: underline;">ROM</h3> 
+    
+</div>
+<div class="d-flex justify-content-around" data-aos="fade-down" data-aos-duration="2000">
+    <div class="form" id="img7">
+        <div class="form-check"  style="border: 2px solid black;">
+          <input type="radio" class="form-check-input" id="radio1"  name="ramStorage-ipad2" value="8GB RAM + 128 GB Storage | ₹39,999" checked>8GB RAM + 128 GB Storage
+         <label class="form-check-label">~39,999</label> 
+         
+        </div>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="bg-daner"> -->
+      <div class="form" id="img7">
+        <div class="form-check"  style="border: 2px solid black;">
+          <input type="radio" class="form-check-input" id="radio1"  name="ramStorage-ipad2" value="12GB RAM + 256GB Storage | ₹42,999">12GB RAM + 256 GB Storage
+          <label class="form-check-label" for="radio1"></label> 
+         
+          <label class="form-check-label" for="radio1"> ~42,999</label> 
+         
+        </div>
+      </div>    
+
+</div>
+ <h3 style="text-decoration: underline;" data-aos="fade-down" data-aos-duration="2000">Available Colors</h3> 
+ <div class="d-flex justify-content-around" data-aos="fade-down" data-aos-duration="2000">
+    <div class="form" id="img7">
+        <div class="form-check"  style="border: 2px solid black;">
+          <input type="radio" class="form-check-input" id="radio1" value="option1"  name="color-ipad2" data-color="Nimbus Gray" data-image="tablet\\car1_pad2.png" checked>
+          <img id="img" src="tablet\\car1_pad2.png" style="height: 170px;width: 60%; position: relative;display: absolute; overflow: hidden;" alt="13 white">
+          <label class="form-check-label" for="radio1"> Nimbus Gray</label> 
+         
+        </div>
+      </div>
+  </div>
+  <button onclick="addToCart('ipad2')" data-aos="fade-down" data-aos-duration="2000" style="border-radius: 50%; border:10px double black ;">Add to Cart</button>
+<!-- tabs for speciality -->
+ <div class="container-fluid mt-5" style="background-color: black;color: white;" data-aos="fade-down" data-aos-duration="2000">
+    <ul class="nav nav-tabs justify-content-center" style="background-color: black;color: white;"> 
+        <li class="nav-item" > 
+        <a class="nav-link active" data-bs-toggle="tab" href="#demo33">Canva</a> 
+        
+        </li> 
+        <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#demo2">A.I</a> 
+         </li> 
+        <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#demo3">File Transfer</a> 
+      </li> 
+        <li class="nav-item" > 
+          <a class="nav-link" data-bs-toggle="tab" href="#demo4">Display</a> 
+         </li> 
+          <li class="nav-item"> 
+            <a class="nav-link" data-bs-toggle="tab" href="#demo5">Battery</a> 
+              </li> 
+            <!-- <li class="nav-item" >  
+              <a class="nav-link" data-bs-toggle="tab" href="#demo6">AI</a> 
+             </li>  -->
+              
+        </ul>
+        <div class="tab-content " style="background-color: black;color: white;">
+            <div id="demo33" class="container tab-pane active" >
+             <h1>Three on-screen apps? Zero effort. Multitask like a pro to seamlessly drag and drop files between each.</h1>
+             <div class="container">
+               <img id="img" src="tablet\\tab1_pad2.jpg" alt="mtal body" class="tab_img">
+             </div>
+            
+           
+           </div>
+            <div id="demo2" class="container tab-pane">
+             <h1>Your workflow reimagined. Effortlessly convert audio messages to precise summaries. Supercharge your productivity with compelling content.</h1>
+             <div class="container">
+               <img id="img" src="tablet\\tab2_pad2.jpg" alt="Processor" class="tab_img">
+             </div>
+            
+            </div>
+            <div id="demo3" class="container tab-pane">
+             <h1>Secure One-Touch Transmission turbocharges large file transfers from your phone to your tablet. From photos, videos, to documents, accelerate the way you work and play</h1>
+             <div class="container">
+               <img id="img" src="tablet\\tab3_pad2.jpg" alt="Battery" class="tab_img">
+             </div>
+            
+              
+            </div>
+           
+            <div id="demo4" class="container tab-pane">
+             <h1>An expansive 30.73cm display delivers a visual wonderland at a market-leading 3K. With a razor-sharp 303 PPI, every pixel is elevated to a peak brightness of 900 nits³ for ultra-bright, vivid detail</h1>
+             <div class="container">
+               <img id="img" src=" tablet\\tab5_pad2.jpg" alt="Display" class="tab_img">
+             </div>
+           
+             
+            </div>
+            <div id="demo5" class="container tab-pane">
+             <h1>The supersized 9510mAh battery lets you press play all weekend. And with over 40 days of standby, keep your work and ideas flowing for longer</h1>
+             <div class="container">
+               <img id="img" src="tablet\\tab6_pad2.webp" alt="Camera" class="tab_img">
+             </div>
+             
+            </div>
+           
+           </div>
+</div>
+
+    
+    </div>
+     <div id="nord4ce" class="container tab-pane" data-aos="flip-down" data-aos-duration="2000">
+        <div class="container-fluid" >
+            <h5 style="color: red;">5% OFF</h5>
+            <!-- <br> -->
+            <h2>OnePlus Pad</h2>
+            <!-- <br> -->
+            <h6 style="color: gray;">8GB RAM + 128 GB Storage | Halo Green</h6>
+            <!-- <br> -->
+            <h4 style="color: gray;">₨ 35,999 Before Exchange</h4>
+           
+        <div style="color: gray;">
+            M.R.P
+            <a style="text-decoration: line-through;">₨ 37,999</a>
+            (inclusive of all taxes)
+        </div>
+        <div class="container-fluid" style="height: 200px;width: 500px;" id="car11">
+        <div id="demo1" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-indicators">
+              <button data-bs-target="#demo1" data-bs-slide-to="0" class="active"> </button>
+                  <button data-bs-target="#demo1" data-bs-slide-to="1"></button>
+              
+            </div>
+            <div class="carousel-inner">
+            
+              <div class="carousel-item active" data-bs-interval="1000s">
+                <img id="img" src="tablet\\car_pad1.webp" class="d-block w-100"/>
+                  
+              </div>
+              <div class="carousel-item" data-bs-interval="1000s">
+                <img id="img" src="tablet\\car2_pad1.webp" class="d-block w-100"/>
+                  
+              </div>  
+               
+            </div>
+          <button class="carousel-control-prev" data-bs-target="#demo1" data-bs-slide="prev">
+              <span  class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" data-bs-target="#demo1" data-bs-slide="next">
+              <span  class="carousel-control-next-icon"></span>
+          </button>
+          
+           </div>
+        </div>
+        
+    </div>
+    <div clas="container" style="margin-top: 32%;" data-aos="fade-up" data-aos-duration="2000">
+        <h6>The minimum fixed price is: ₹35,999</h6>
+        <h6>Save up to 18% on business purchases</h6>
+        <h3 style="text-decoration: underline;">ROM</h3> 
+      
+       </div>
+       <div class="d-flex justify-content-around" data-aos="fade-up" data-aos-duration="2000">
+        
+        <div class="form" id="img7">
+            <div class="form-check"  style="border: 2px solid black;">
+              <input type="radio" class="form-check-input" id="radio1" name="ramStorage-ipad" value="8GB RAM + 128 GB Storage | ₹35,999"  checked >8GB RAM + 128 GB Storage
+              <label class="form-check-label">~35,999</label> 
+             
+            </div>
+          </div>
+
+          <div class="form" id="img7">
+            <div class="form-check"  style="border: 2px solid black;">
+              <input type="radio" class="form-check-input" id="radio1" name="ramStorage-ipad" value="12GB RAM + 256 GB Storage | ₹37,999" >12GB RAM + 256 GB Storage
+              <label class="form-check-label"> ~37,999</label> 
+             
+            </div>
+          </div>
+
+       </div>
+   <h3 style="text-decoration: underline;" data-aos="fade-up" data-aos-duration="2000">Available Colors</h3> 
+   <div class="d-flex justify-content-around" data-aos="fade-up" data-aos-duration="2000">
+    <div class="form" id="img7">
+        <div class="form-check"  style="border: 2px solid black;" >
+          <input type="radio" class="form-check-input" id="radio1" value="option1"  name="color-ipad" data-color="Halo Green" data-image="tablet\\car2_pad1.webp" checked>
+          <img id="img" src="tablet\\car2_pad1.webp" style="height: 200px;width: 200px;" alt="13r white">
+          <label class="form-check-label" for="radio1"> Halo Green</label> 
+         
+        </div>
+      </div> 
+
+      </div>
+      <button onclick="addToCart('ipad')" data-aos="fade-up" data-aos-duration="2000" style="border-radius: 50%; border:10px double black ;">Add to Cart</button>
+  <!-- tabs for speciality -->
+   <div class="container-fluid mt-5" style="background-color: black;color: white;" data-aos="fade-up" data-aos-duration="2000">
+  
+    <ul class="nav nav-tabs justify-content-center" style="background-color: black;color: white;"> 
+    
+        <li class="nav-item" > 
+        <a class="nav-link active" data-bs-toggle="tab" href="#demo22">Display</a> 
+         </li> 
+        <li class="nav-item" > 
+        <a class="nav-link" data-bs-toggle="tab" href="#demo34">Battery</a> 
+      </li> 
+        <li class="nav-item" > 
+          <a class="nav-link" data-bs-toggle="tab" href="#demo44">Connection</a> 
+         </li> 
+          <li class="nav-item"> 
+            <a class="nav-link" data-bs-toggle="tab" href="#demo54">Speaker</a> 
+              </li> 
+           
+        </ul>
+        <div class="tab-content" style="background-color: black;color: white;">
+  
+            <div id="demo22" class="container tab-pane active">
+             <h1>Welcome to the world's first tablet with a 7:5 ratio screen. We call it ReadFit. It showcases a more squared display for a better view, while maximizing tactile comfort</h1>
+             <div class="container-fluid">
+               <img id="img" src="tablet\\pad_tab1.webp" alt="Processor" class="tab_img">
+             </div>
+             
+             
+            </div>
+            <div id="demo34" class="container tab-pane">
+             <h1>With 67W SUPERVOOC, you'll never worry about reaching for the charging cable again. A full charge takes just over 60 minutes. Charging is safer too with the advanced Battery Health Engine.</h1>
+             <div class="container-fluid">
+               <img id="img" src="tablet\\pad_tab2.webp" alt="Battery" class="tab_img">
+             </div>
+            
+            </div>
+           
+            <div id="demo44" class="container tab-pane">
+             <h1>Auto Connect hooks you up smoother and faster across devices. Level up from your smartphone display to the OnePlus Pad – and to an even larger screen – to simplify your work and amplify your play.
+             </h1>
+            
+             <div class="container">
+               <img id="img" src="tablet\\pad_tab3.jpg" alt="Display" class="tab_img">
+             </div>
+             
+            </div>
+            <div id="demo54" class="container tab-pane">
+             <h1>Introducing Omnibearing Sound Field technology. Exclusive to OnePlus and amplified by four powerful speakers, experience enhanced audio quality and the optimum sound in any orientation.</h1>
+             <div class="container">
+               <img id="img" src="tablet\\pad_tab4.jpg" alt="Camera" class="tab_img">
+             </div>
+            
+            </div>
+           
+            
+            
+           </div>
+
+  </div>
+     </div>
+  
+    
+    </div>
+    </div>
+    </div>
+      
+   <div class="container-fluid" style="background-color: black; border: 7px double white;" data-aos="zoom-in" data-aos-duration="3000">
+    <div class="row">
+        <div class="col p-3" style="color: aliceblue;">
+            <h4>
+                Phones
+            </h4>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Store
+                </h1>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Support
+            </h4>
+        </div>
+        <div class="col p-3" style="color: aliceblue;" >
+            <h4>
+                Explore
+            </h4>
+        </div>
+       
+    </div>
+    <div class="row" style="border: 2px solid white;">
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page13.html" style="text-decoration: none;" >
+                    OnePlus 13 series
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_ipad2.html" style="text-decoration: none;">
+                    Tablet
+                </a>
+
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#repair" style="text-decoration: none;">
+                    Service center
+                </a>
+
+
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#comunity" style="text-decoration: none;">
+                Our Communtiy
+                </a>
+
+            </h6>
+        </div>
+       
+    </div>
+    <div class="row" style="border: 2px solid white;">
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_nord4.html" style="text-decoration: none;">
+                    OnePlus Nord 4
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="loading_page_watch2.html" style="text-decoration: none;">
+                    Wearable
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#repair" style="text-decoration: none;">
+                    Repair Service
+                </a>
+            </h6>
+        </div>
+        <div class="col p-3" style="color: aliceblue;">
+            <h6>
+                <a href="index.html#os" style="text-decoration: none;">
+                    Our Os Operating system
+                </a>
+            </h6>
+        </div>
+           
+    </div>
+    
+</div>   
+
+
+   <!-- AOS JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   <script>
+       AOS.init();
+   </script>
+<!--  to referesh aos using javascript -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.nav-link').forEach(tab => {
+          tab.addEventListener('shown.bs.tab', function (event) {
+              AOS.refresh();
+          });
+      });
+  });
+</script>
+
+    </body>
+</html>
